@@ -28,6 +28,7 @@ class Module
                                 'action'     => 'index',
                             ],
                         ],
+                        'priority' => -1,
                     ],
                 ],
             ],
