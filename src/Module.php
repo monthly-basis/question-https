@@ -19,7 +19,7 @@ class Module
             ],
             'router' => [
                 'routes' => [
-                    'index' => [
+                    'monthly-basis/question-https' => [
                         'type' => Literal::class,
                         'options' => [
                             'route'    => '/',
