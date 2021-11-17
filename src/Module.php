@@ -18,6 +18,9 @@ class Module
                     QuestionHttpsController\Questions::class => function ($sm) {
                         return new QuestionHttpsController\Questions();
                     },
+                    QuestionHttpsController\Questions\Ask::class => function ($sm) {
+                        return new QuestionHttpsController\Questions\Ask();
+                    },
                 ],
             ],
             'router' => [
@@ -45,6 +48,19 @@ class Module
                         ],
                         'priority' => -1,
                         'may_terminate' => true,
+                        'child_routes' => [
+                            'ask' => [
+                                'type' => Literal::class,
+                                'options' => [
+                                    'route'    => '/ask',
+                                    'defaults' => [
+                                        'controller' => QuestionHttpsController\Questions\Ask::class,
+                                        'action'     => 'ask',
+                                    ],
+                                ],
+                                'may_terminate' => true,
+                            ],
+                        ]
                     ],
                 ],
             ],
