@@ -1,7 +1,12 @@
+<?php
+$htmlHeadTitle = isset($this->htmlHeadTitle)
+               ? $this->htmlHeadTitle
+               : 'Question HTTPS';
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Question HTTPS</title>
+    <title><?= $this->escape($htmlHeadTitle); ?></title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
