@@ -33,18 +33,18 @@ class Module
                         ],
                         'priority' => -1,
                         'may_terminate' => true,
-                        'child_routes' => [
-                            'questions' => [
-                                'type' => Literal::class,
-                                'options' => [
-                                    'route'    => 'questions',
-                                    'defaults' => [
-                                        'controller' => QuestionHttpsController\Questions::class,
-                                        'action'     => 'index',
-                                    ],
-                                ],
+                    ],
+                    'monthly-basis/question-https/questions' => [
+                        'type' => Literal::class,
+                        'options' => [
+                            'route'    => '/questions',
+                            'defaults' => [
+                                'controller' => QuestionHttpsController\Questions::class,
+                                'action'     => 'index',
                             ],
                         ],
+                        'priority' => -1,
+                        'may_terminate' => true,
                     ],
                 ],
             ],
