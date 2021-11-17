@@ -15,6 +15,9 @@ class Module
                     QuestionHttpsController\Index::class => function ($sm) {
                         return new QuestionHttpsController\Index();
                     },
+                    QuestionHttpsController\Questions::class => function ($sm) {
+                        return new QuestionHttpsController\Questions();
+                    },
                 ],
             ],
             'router' => [
@@ -29,6 +32,19 @@ class Module
                             ],
                         ],
                         'priority' => -1,
+                        'may_terminate' => true,
+                        'child_routes' => [
+                            'questions' => [
+                                'type' => Literal::class,
+                                'options' => [
+                                    'route'    => 'questions',
+                                    'defaults' => [
+                                        'controller' => QuestionHttpsController\Questions::class,
+                                        'action'     => 'index',
+                                    ],
+                                ],
+                            ],
+                        ],
                     ],
                 ],
             ],
