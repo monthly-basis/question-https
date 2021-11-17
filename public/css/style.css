@@ -29,3 +29,13 @@ input {
     justify-content: space-between;
     max-width: 1348px;
 }
+    .columns.one-column .column {
+        width: 100%;
+    }
+.panel {
+    padding: 10px;
+    background-color: #fff;
+}
+    .panel *:last-child {
+        margin-bottom: 0;
+    }
