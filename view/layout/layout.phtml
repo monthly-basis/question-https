@@ -6,8 +6,19 @@
 </head>
 
 <body>
-
-<?= $this->content ?>
-
+    <header class="columns two-columns">
+        <div class="column">
+            <h1>Question HTTPS</h1>
+        </div>
+        <div class="column">
+            <a href="/questions/ask">Ask a New Question</a>
+        </div>
+    </header>
+    <main>
+        <?= $this->content ?>
+    </main>
+    <footer class="columns">
+        &copy; 2021 Monthly Basis
+    </footer>
 </body>
 </html>
